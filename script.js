@@ -12,33 +12,49 @@ let appData={
 
 };
 
-// let i = 0
-//     while (i<2) {
-//         let a = prompt ("Please input a mandatory expense item for the month", '' ),
-//         b = prompt ("How much will it cost?", '');
-//         i++   
-//     }
+let i = 0
+    while (i<2) {
+        let a = prompt ("Please input a mandatory expense item for the month", '' ),
+        b = prompt ("How much will it cost?", '');
+   if ( typeof(a)=== 'string' && typeof(a)!= null && typeof(b)!= null && a!= '' && b!= '' && a.length <50) {
+     console.log ("done");
+
+     appData.expenses [a] = b;
+  } else {
+     console.log("bad result");
+     i--;
+     }
+i++   
+}
    
 // let i = 0
 // do {let a = prompt ("Please input a mandatory expense item for the month", '' ),
 //    b = prompt ("How much will it cost?", '');
-//         i++   
+//    if ( typeof(a)=== 'string' && typeof(a)!= null && typeof(b)!= null && a!= '' && b!= '' && a.length <50) {
+//      console.log ("done");
+//      appData.expenses [a] = b;
+//   } else {
+//      console.log("bad result");
+//      i--;
+//      }
+//   i++   
+// }
+// while (i <2);
+
+
+// for (let i=0; i<2; i++) {
+//     let a = prompt ("Please input a mandatory expense item for the month", '' ),
+//         b = prompt ("How much will it cost?", '');
+
+
+//     if ( typeof(a)=== 'string' && typeof(a)!= null && typeof(b)!= null && a!= '' && b!= '' && a.length <50) {
+//     console.log ("done");
+//     appData.expenses [a] = b;
+//     } else {
+//         console.log("bad result");
+//         i--;
 //     }
-//     while (i <2);
-
-
-for (let i=0; i<2; i++) {
-    let a = prompt ("Please input a mandatory expense item for the month", '' ),
-        b = prompt ("How much will it cost?", '');
-
-
-    if ((typeof(a))=== 'string' && (typeof(a))!= null && (typeof(b))!= null && a!= '' && b!= '' && a.length <50) {
-    console.log ("done");
-    appData.expenses [a] = b;
-    } else {
-        break
-    }
-}
+// };
 appData.moneyPerDay = appData.budget / 30;
 
 alert("Budget per day:" + appData.moneyPerDay );
